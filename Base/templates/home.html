@@ -1,19 +1,35 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="{% static 'Style_home.css' %}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo-ML.com</title>
+    <link rel="stylesheet" href="{% static 'Style_home.css' %}">
+</head>
 <body>
-<div class="Front_text"> 
-    <p>See inside AI!</p>
-    <p>Ask me anything?</p>
-</div>
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    <div class="Front_text"> 
+        <p>See inside AI!</p>
+    </div>
 
-
-<form method="post">
-    {% csrf_token %}
-    <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
-    
-</form>
-
+    <form method="post">
+        {% csrf_token %}
+        <div class="form__group">
+            <input type="text" class="form__field" placeholder="Name" name="name" id="name" required />
+            <label for="name" class="form__label">ASK ME ANYTHING?</label>
+        </div>
+    </form>
+    <div class="container">
+        <button class="nav-button">
+            <span>AlgoML</span>
+            <span>PROJECTS</span>
+            <span>CONTACT</span>
+        </button>
+    </div>
 </body>
 </html>
